@@ -6,8 +6,8 @@
  *
  * Return: %
  */
-int print_percent(va_list %)
+int print_percent(va_list P)
 {
-	(void)%;
+	(void)P;
 	return (_putchar('%'));
 }
