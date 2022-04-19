@@ -51,7 +51,7 @@ int print_x(va_list x)
 }
 
 /**
- * print_X -f that takes am unsigned int and prints it in uppercase hex notation
+ * print_X -f that takes an unsigned int and prints it in uppercase hex notation
  * @X: unsigned int to print
  *
  * Return: number of digits printed
