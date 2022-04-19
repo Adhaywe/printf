@@ -1,9 +1,9 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#include <stdarg.h> /* va_list*/
-#include <stdlib.h> /*NULL ,malloc, free*/
-#include <unistd.h> /* write */
+#include <stdarg.h>/* va_list*/
+#include <stdlib.h>/*NULL ,malloc, free*/
+#include <unistd.h>/* write */
 /**
  * struct print - structure for printing various data types
  * @t: data type to be printed
@@ -18,7 +18,6 @@ typedef struct print
 int _putchar(char c);
 int _printf(const char *format, ...);
 char *create_buffer(void);
-int _strlen(char *s);
 int print_c(va_list c);
 int print_s(va_list s);
 int print_i(va_list i);
