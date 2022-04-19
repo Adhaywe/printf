@@ -16,25 +16,6 @@ int _strlen(char *s)
 	return (l);
 }
 /**
- * _strcpy - function copies string from src to dest
- *
- * @dest: pointer to destination of string
- * @src: pointer to source
- */
-char _strcpy(char *dest, char *src)
-{
-	int i;
-
-	i = 0;
-	while (src[i])
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
-}
-/**
  * print_c - function that prints a char
  * @c: char to be printed
  *
@@ -47,24 +28,24 @@ int print_c(va_list c)
 	_putchar(ch);
 	return (1);
 }
-
+/**
+ * print_s - function that prints a string
+ * @s: string to be printed
+ *
+ * Return: number of chars printed
+ */
 int print_s(va_list s)
 {
-	char *s;
-	char *p;
-	int len;
+	int count;
+	char *str = va_arg(s, char *);
 
-	s = va_arg(list, char *);
-	if (s == NULL)
-		s = "(null)";
-
-	len = _strlen(s);
-
-	p = malloc(sizeof(char) * len + 1);
-	if (p == NULL)
-		return (NULL);
-
-	return (_strcpy(p, s));
+	if (str == NULL)
+		str = "(null)";
+	for (count = 0; str[count]; count++)
+	{
+		_putchar(str[count]);
+	}
+	return (count);
 }
 /**
  * hex_print - function that prints a char's ascii value in uppercase hex
