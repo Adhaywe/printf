@@ -21,7 +21,7 @@ int _strlen(char *s)
  * @dest: pointer to destination of string
  * @src: pointer to source
  */
-char *_strcpy(char *dest, char *src)
+char _strcpy(char *dest, char *src)
 {
 	int i;
 
@@ -48,7 +48,7 @@ int print_c(va_list c)
 	return (1);
 }
 
-int *print_s(va_list list)
+int print_s(va_list s)
 {
 	char *s;
 	char *p;
