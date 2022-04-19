@@ -20,7 +20,6 @@ int _printf(const char *format, ...);
 char *create_buffer(void);
 void write_buffer(char *buffer, int len, va_list arg);
 int _strlen(char *s);
-char *_strcpy(char *dest, char *src);
 int print_c(va_list c);
 int print_s(va_list s);
 int print_i(va_list i);
