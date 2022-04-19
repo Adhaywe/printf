@@ -7,7 +7,7 @@
  *
  * Return: pointer to valid function or NULL
  */
-int (*get_func(const char *format))(va_list)
+static int (*get_func(const char *format))(va_list)
 {
 	unsigned int i;
 	print_t type[] = {
