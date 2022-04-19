@@ -24,6 +24,7 @@ static int (*get_func(const char *format))(va_list)
 		{"S", print_S},
 		{"r", print_r},
 		{"R", print_R},
+		{"P", print_percent},
 		{NULL, NULL}
 	};
 
@@ -50,6 +51,7 @@ int _printf(const char *format, ...)
 	unsigned int i = 0, count = 0;
 	va_list arg;
 	int (*f)(va_list);
+	char P;
 
 	if (format == NULL)
 		return (-1);
@@ -63,6 +65,8 @@ int _printf(const char *format, ...)
 		}
 		if (!format[i])
 			return (count);
+		else if (format[i] == '%')
+			f = get_func(&P);
 		f = get_func(&format[i + 1]);
 		if (f != NULL)
 		{
