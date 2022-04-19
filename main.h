@@ -18,7 +18,6 @@ typedef struct print
 int _putchar(char c);
 int _printf(const char *format, ...);
 char *create_buffer(void);
-void write_buffer(char *buffer, int len, va_list arg);
 int _strlen(char *s);
 int print_c(va_list c);
 int print_s(va_list s);
