@@ -2,7 +2,7 @@
 
 /**
  * print_percent - function that prints a percent
- * @%: argument from _printf
+ * @P: argument from _printf
  *
  * Return: %
  */
